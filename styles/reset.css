@@ -1,0 +1,24 @@
+*, *::before, *::after {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    text-decoration: none;
+    list-style: none;
+    border: none;
+}
+
+
+body{
+    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+    overflow: hidden;
+    font-weight: 400;
+    line-height: 1.7;
+    font-size: 62.5%;
+    color: #333;
+    padding: 1.4rem;
+}
+
+
+html{
+    scroll-behavior: smooth;   
+}
