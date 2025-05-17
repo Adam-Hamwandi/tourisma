@@ -1,0 +1,23 @@
+{
+  "name": "tourisma",
+  "version": "1.0.0",
+  "description": "",
+  "homepage": "https://github.com/Adam-Hamwandi/tourisma#readme",
+  "bugs": {
+    "url": "https://github.com/Adam-Hamwandi/tourisma/issues"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Adam-Hamwandi/tourisma.git"
+  },
+  "license": "ISC",
+  "author": "Adam Hamwandi",
+  "type": "commonjs",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "devDependencies": {
+    "sass": "^1.89.0"
+  }
+}

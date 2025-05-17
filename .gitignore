@@ -1,0 +1,15 @@
+{
+
+# Ignore the build directory
+build/
+# Ignore the node_modules directory
+node_modules/
+# Ignore the .env file
+.env
+# Ignore the .DS_Store file
+.DS_Store
+# Ignore the .vscode directory
+.vscode/
+# Ignore the .idea directory
+.idea/
+}
