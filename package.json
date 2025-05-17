@@ -15,7 +15,7 @@
   "type": "commonjs",
   "main": "index.js",
   "scripts": {
-    "compile:sass": "sass sass/main.scss styles/main.css"
+    "compile:sass": "sass sass/main.scss styles/main.css -w"
   },
   "devDependencies": {
     "sass": "^1.89.0"
