@@ -1,4 +1,4 @@
-*, *::before, *::after {
+/* *, *::before, *::after {
     box-sizing: border-box;
     margin: 0;
     padding: 0;
@@ -15,10 +15,10 @@ body{
     line-height: 1.7;
     font-size: 62.5%;
     color: #333;
-    padding: 1.4rem;
+    padding: 1.4rem
 }
 
 
 html{
     scroll-behavior: smooth;   
-}
+} */

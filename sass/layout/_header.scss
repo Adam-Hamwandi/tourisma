@@ -1,0 +1,98 @@
+@use "../abstract/variables" as *;
+
+// Header
+.header{
+    height: 95dvh;
+    background-image: 
+    linear-gradient(to bottom , 
+    $color-gradient-start , 
+    $color-gradient-end ) 
+    ,url("../images/hero-image.webp");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    border-radius: 1.6rem;
+
+    &__logo-box{
+        position: relative;
+    }
+
+    &__logo{
+        position: absolute;
+        top: 2.8em;
+        left: 2.8em;
+        height: 4em;
+        animation: pulsate-bck-reverse 1.3s linear 0s infinite reverse backwards; 
+    }
+
+
+}
+
+
+
+
+.header__content-box{
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        text-align: center;
+
+    &__title{
+        margin-bottom: clamp(1.6rem, 3vw, 2rem);
+    }
+}
+
+.heading-main{
+    font-size: $font-size-display;
+    color: $color-white;
+    line-height: 130%;
+    font-weight: 700;
+    display: block;
+    letter-spacing: clamp(0.5rem, 4vw, 3.2rem);
+    animation-name: slide-in-left;
+    animation-duration: 1.3s;
+    animation-timing-function: ease-out;
+    animation-delay: 0;
+    animation-direction: normal;
+    animation-fill-mode: none;
+
+
+}
+
+.heading-sub{
+    font-size: $font-size-h4;
+    color: $color-offwhite;
+    line-height: 100%;
+    margin-bottom: .4em;
+    font-weight: 400;
+    display: block;
+    letter-spacing: .8rem;
+    text-transform: capitalize;
+    animation-name: slide-in-right;
+    animation-duration: 1.3s;
+    animation-timing-function: ease-in-out;
+    animation-delay: 0;
+    animation-iteration-count: 1;
+    animation-direction: normal;
+    animation-fill-mode: none;
+
+}
+
+.header__description{
+        font-size: $large-text;
+        color: $color-lightest-gray;
+        line-height: 150%;
+        width: 60ch;
+        max-width: 100%;
+        margin: 0 auto;
+        font-weight: 300;
+        margin-bottom: 1.8em;
+        animation-name: slide-in-right;
+        animation-duration: 1.3s;
+        animation-timing-function: ease-in-out;
+        animation-delay: 0;
+        animation-iteration-count: 1;
+        animation-direction: normal;
+        animation-fill-mode: none;
+}

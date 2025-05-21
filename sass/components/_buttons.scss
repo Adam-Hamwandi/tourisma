@@ -1,0 +1,60 @@
+@use "../abstract/variables" as *;
+
+
+.btn:link,
+.btn:visited {
+    text-transform: uppercase;
+    font-size: $font-size-body-md;
+    padding: 1.2em 2.4em;
+    display: inline-block;
+    border-radius: 1rem;
+    transition: all 0.2s;
+    position: relative;
+    letter-spacing: 0.2rem;
+
+&:hover{
+    transform: translateY(-3px);
+    box-shadow: 0 10px 20px rgba($primary-color, 0.7);
+}
+&:active{
+    transform: translateY(-1px);
+    box-shadow: 0 5px 10px rgba($primary-color, 0.7);
+
+}
+}
+
+.btn--primary {
+    background-color: $primary-color;
+    color: $color-offwhite;
+    margin-top: 3.2rem;
+    font-weight: 500;
+
+    &::after{
+    content: "";
+    display: inline-block;
+    height: 100%;
+    width: 100%;
+    border-radius: 1rem;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: -1;
+    transition: all 0.4s;
+}
+    &::after{
+    background-color: $primary-color;
+}
+
+&:hover::after{
+    transform: scaleX(1.4) scaleY(1.9);
+    opacity: 0;
+}
+
+}
+
+
+.btn-animated{
+    animation: moveInBottom 1s ease-out .75s; 
+    animation-fill-mode: backwards;
+
+}

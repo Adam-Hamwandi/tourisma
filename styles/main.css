@@ -7,35 +7,16 @@
   border: none;
 }
 
-body {
-  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
-  overflow: hidden;
-  font-weight: 400;
-  line-height: 1.7;
-  font-size: 62.5%;
-  color: #333;
-  padding: 1.4rem;
-}
-
 html {
+  font-size: 62.5%;
   scroll-behavior: smooth;
+  overflow: hidden;
 }
 
-.header {
-  height: 95dvh;
-  background-image: linear-gradient(to bottom, rgba(5, 17, 61, 0.635), rgba(5, 17, 61, 0.7)), url("../images/hero-image.webp");
-  background-size: cover;
-  background-position: center;
-  background-repeat: no-repeat;
-  border-radius: 0.8rem;
+body {
+  box-sizing: border-box;
 }
-.header__logo {
-  position: absolute;
-  top: 3.2rem;
-  left: 3.2rem;
-  height: 2.8rem;
-  animation: pulsate-bck-reverse 1.3s linear 0s infinite reverse backwards;
-}
+
 @keyframes pulsate-bck-reverse {
   0% {
     transform: scale(1);
@@ -46,40 +27,6 @@ html {
   100% {
     transform: scale(1);
   }
-}
-.header__content-box {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  text-align: center;
-}
-.header__title {
-  margin-bottom: clamp(1.6rem, 3vw, 2rem);
-}
-.header__description {
-  font-size: 1.4rem;
-  color: #eaeaea;
-  line-height: 150%;
-  width: 60ch;
-  max-width: 100%;
-  margin: 0 auto;
-  font-weight: 300;
-}
-
-.heading-main {
-  font-size: clamp(3.2rem, 8vw, 8rem);
-  color: #ffffff;
-  line-height: 130%;
-  font-weight: 700;
-  display: block;
-  letter-spacing: clamp(0.5rem, 4vw, 2.8rem);
-  animation-name: slide-in-left;
-  animation-duration: 1.3s;
-  animation-timing-function: ease-out;
-  animation-delay: 0;
-  animation-direction: normal;
-  animation-fill-mode: none;
 }
 @keyframes slide-in-left {
   0% {
@@ -94,23 +41,6 @@ html {
     opacity: 1;
   }
 }
-
-.heading-sub {
-  font-size: 3.2rem;
-  color: #f8f8f8;
-  line-height: 100%;
-  font-weight: 400;
-  display: block;
-  letter-spacing: 0.8rem;
-  text-transform: capitalize;
-  animation-name: slide-in-right;
-  animation-duration: 1.3s;
-  animation-timing-function: ease-in-out;
-  animation-delay: 0;
-  animation-iteration-count: 1;
-  animation-direction: normal;
-  animation-fill-mode: none;
-}
 @keyframes slide-in-right {
   0% {
     transform: rotateX(-30deg) translateX(300px) skewX(30deg);
@@ -124,16 +54,35 @@ html {
     opacity: 1;
   }
 }
+@keyframes moveInBottom {
+  0% {
+    transform: translateY(100px);
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+    transform: translate(0);
+  }
+}
+body {
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+  overflow: hidden;
+  font-weight: 400;
+  line-height: 1.7;
+  color: #333;
+  padding: 2rem;
+}
 
 .btn:link,
 .btn:visited {
   text-transform: uppercase;
-  font-size: 1.2rem;
-  padding: 1.2rem 2.8rem;
+  font-size: 1.6em;
+  padding: 1.2em 2.4em;
   display: inline-block;
   border-radius: 1rem;
   transition: all 0.2s;
   position: relative;
+  letter-spacing: 0.2rem;
 }
 .btn:link:hover,
 .btn:visited:hover {
@@ -176,15 +125,86 @@ html {
   animation: moveInBottom 1s ease-out 0.75s;
   animation-fill-mode: backwards;
 }
-@keyframes moveInBottom {
-  0% {
-    transform: translateY(100px);
-    opacity: 0;
-  }
-  100% {
-    opacity: 1;
-    transform: translate(0);
-  }
+
+.header {
+  height: 95dvh;
+  background-image: linear-gradient(to bottom, rgba(5, 17, 61, 0.635), rgba(5, 17, 61, 0.7)), url("../images/hero-image.webp");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  border-radius: 1.6rem;
+}
+.header__logo-box {
+  position: relative;
+}
+.header__logo {
+  position: absolute;
+  top: 2.8em;
+  left: 2.8em;
+  height: 4em;
+  animation: pulsate-bck-reverse 1.3s linear 0s infinite reverse backwards;
+}
+
+.header__content-box {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+}
+.header__content-box__title {
+  margin-bottom: clamp(1.6rem, 3vw, 2rem);
+}
+
+.heading-main {
+  font-size: 8em;
+  color: #ffffff;
+  line-height: 130%;
+  font-weight: 700;
+  display: block;
+  letter-spacing: clamp(0.5rem, 4vw, 3.2rem);
+  animation-name: slide-in-left;
+  animation-duration: 1.3s;
+  animation-timing-function: ease-out;
+  animation-delay: 0;
+  animation-direction: normal;
+  animation-fill-mode: none;
+}
+
+.heading-sub {
+  font-size: 3.2em;
+  color: #f8f8f8;
+  line-height: 100%;
+  margin-bottom: 0.4em;
+  font-weight: 400;
+  display: block;
+  letter-spacing: 0.8rem;
+  text-transform: capitalize;
+  animation-name: slide-in-right;
+  animation-duration: 1.3s;
+  animation-timing-function: ease-in-out;
+  animation-delay: 0;
+  animation-iteration-count: 1;
+  animation-direction: normal;
+  animation-fill-mode: none;
+}
+
+.header__description {
+  font-size: 2em;
+  color: #eaeaea;
+  line-height: 150%;
+  width: 60ch;
+  max-width: 100%;
+  margin: 0 auto;
+  font-weight: 300;
+  margin-bottom: 1.8em;
+  animation-name: slide-in-right;
+  animation-duration: 1.3s;
+  animation-timing-function: ease-in-out;
+  animation-delay: 0;
+  animation-iteration-count: 1;
+  animation-direction: normal;
+  animation-fill-mode: none;
 }
 
 /*# sourceMappingURL=main.css.map */
